@@ -117,7 +117,7 @@
 
     
     
-<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" class="silex-custom-font"><link href="https://fonts.googleapis.com/css?family=Cabin" rel="stylesheet" class="silex-custom-font"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="website-width" content="956"><meta name="hostingProvider" content="ghpages"><link href="css/styles.css" rel="stylesheet" type="text/css"><style>body { opacity: 0; transition: .25s opacity ease; }</style></head>
+<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" class="silex-custom-font"><link href="https://fonts.googleapis.com/css?family=Cabin" rel="stylesheet" class="silex-custom-font"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="website-width" content="1402"><meta name="hostingProvider" content="ghpages"><link href="css/styles.css" rel="stylesheet" type="text/css"><style>body { opacity: 0; transition: .25s opacity ease; }</style></head>
 
 <body class="body-initial all-style enable-mobile silex-runtime silex-published" data-silex-type="container-element" style=""><div data-silex-type="container-element" class="container-element editable-style silex-id-1552774272342-11 section-element hide-on-desktop"><div data-silex-type="container-element" class="editable-style silex-id-1552774272339-10 container-element silex-element-content silex-container-content website-width"></div></div>
 
@@ -343,7 +343,68 @@
             
             
             
-        <a href="./" data-silex-type="text-element" class="editable-style text-element silex-id-1424647173853" style="">
+        <div data-silex-type="text-element" class="editable-style text-element silex-component silex-component-hamburger prevent-auto-z-index silex-id-1590512900752-2" style=""><div class="silex-element-content normal"><style>.hamburger-menu_1590512901049_467 {position: absolute; z-index: 20;}.silex-editor .hamburger-menu_1590512901049_467 nav {left: -9999px;}.hamburger-menu_1590512901049_467 nav ul {margin-top: 80px;}.hamburger-menu_1590512901049_467 nav {opacity: 0; position: absolute; background-color: #ededed; transition: left 1s ease, height 0s ease 1s; left: -300px; width: 300px; height: 20px;}.hamburger-menu_1590512901049_467.open nav {opacity: 1; height: 100vh; left: 0; transition: left 1s ease, height 0s ease 0s;}.hamburger-menu_1590512901049_467 .nav-container {z-index: 10; position: absolute;}.hamburger-menu_1590512901049_467.open .nav-container {}.hamburger-menu_1590512901049_467 .hamburger-btn {z-index: 20; cursor: pointer; position: absolute;}.hamburger-menu_1590512901049_467 .hamburger-btn span {display: block; width: 30px; height: 5px; margin-bottom: 3px; position: relative; background-color: #000000; border: 1px solid #ffffff; border-radius: 3px; transition: border-color 0.1s ease-in,
+      opacity 0.1s ease-in,
+      transform 0.1s ease-in,
+      background 0.1s ease-in;}.hamburger-menu_1590512901049_467.open .hamburger-btn span {border-color: rgba(255, 255, 255, 0);}.hamburger-menu_1590512901049_467 .hamburger-btn span:first-child {transform-origin: 4px -2px;}.hamburger-menu_1590512901049_467.open .hamburger-btn span:first-child {transform: rotate(45deg) translate(7px, -4px);}.hamburger-menu_1590512901049_467.open .hamburger-btn span:nth-last-child(2) {opacity: 0;}.hamburger-menu_1590512901049_467 .hamburger-btn span:nth-child(3) {transform-origin: -11px 4px;}.hamburger-menu_1590512901049_467.open .hamburger-btn span:nth-child(3) {transform: rotate(-45deg) translate(0, 12px);}</style>
+<!-- inspired by https://codepen.io/erikterwan/pen/EVzeRP -->
+<div class="hamburger-menu_1590512901049_467 closed">
+    <div class="hamburger-btn ">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <div class="nav-container">
+      <div class="prevent-scale">
+        <nav role="navigation" class="">
+            <ul>
+            
+                <li><a href="home.html" title="Acasă">Generalități</a></li>
+            
+                <li><a href="m-nc-ruri.html" title="Mâncăruri" class="page-link-active">Mâncăruri</a></li>
+            
+                <li><a href="team.html" title="Tradiții">Tradiții</a></li>
+            
+                <li><a href="info.html" title="Regiuni">Regiuni</a></li>
+            
+            </ul>
+        </nav>
+      </div>
+  </div>
+</div>
+<script>
+(function() {
+  var isOpen = false;
+  function close() {
+    isOpen = false;
+    $('.hamburger-menu_1590512901049_467').removeClass('open');
+    $('.hamburger-menu_1590512901049_467').addClass('closed');
+  }
+  function open() {
+    isOpen = true;
+    $('.hamburger-menu_1590512901049_467').addClass('open');
+    $('.hamburger-menu_1590512901049_467').removeClass('closed');
+  }
+  function toggle() {
+    if(isOpen) close();
+    else open();
+  }
+  var silexElement = $('.hamburger-menu_1590512901049_467').closest('.editable-style');
+  function move(data) {
+    var offset = silexElement.offset();
+    $('.hamburger-menu_1590512901049_467 .nav-container').css({
+      'transform': 'translate(' + (data.scrollLeft - (offset.left/data.scale)) + 'px, ' + (data.scrollTop - (offset.top/data.scale)) + 'px)'
+    });
+  }
+  $('.hamburger-menu_1590512901049_467 .hamburger-btn').click(function() { toggle(); });
+  $(document).on('silex.scroll silex.resize', function(e, data) {
+    close();
+    move(data);
+  });
+  close();
+})();
+</script>
+</div></div><a href="./" data-silex-type="text-element" class="editable-style text-element silex-id-1424647173853" style="">
                 <div class="silex-element-content normal">
                     <h1>&nbsp;Turismul culinar în Japonia</h1><span class="_wysihtml-temp-caret-fix" style="position: absolute; display: block; min-width: 1px; z-index: 99999;">﻿</span></div>
             </a></div>
@@ -376,7 +437,7 @@
       </div>
   </div>
 </div>
-<script>
+<script type="text/javascript">
 (function() {
   var isOpen = false;
   function close() {
@@ -408,68 +469,7 @@
   close();
 })();
 </script>
-</div></div></div><div data-silex-type="text-element" class="editable-style text-element silex-component silex-component-hamburger prevent-auto-z-index silex-id-1590509651378-41" style=""><div class="silex-element-content normal"><style>.hamburger-menu_1590509651378_221 {position: absolute; z-index: 20;}.silex-editor .hamburger-menu_1590509651378_221 nav {left: -9999px;}.hamburger-menu_1590509651378_221 nav ul {margin-top: 80px;}.hamburger-menu_1590509651378_221 nav {opacity: 0; position: absolute; background-color: #ededed; transition: left 1s ease, height 0s ease 1s; left: -300px; width: 300px; height: 20px;}.hamburger-menu_1590509651378_221.open nav {opacity: 1; height: 100vh; left: 0; transition: left 1s ease, height 0s ease 0s;}.hamburger-menu_1590509651378_221 .nav-container {z-index: 10; position: absolute;}.hamburger-menu_1590509651378_221.open .nav-container {}.hamburger-menu_1590509651378_221 .hamburger-btn {z-index: 20; cursor: pointer; position: absolute;}.hamburger-menu_1590509651378_221 .hamburger-btn span {display: block; width: 30px; height: 5px; margin-bottom: 3px; position: relative; background-color: #000000; border: 1px solid #ffffff; border-radius: 3px; transition: border-color 0.1s ease-in,
-      opacity 0.1s ease-in,
-      transform 0.1s ease-in,
-      background 0.1s ease-in;}.hamburger-menu_1590509651378_221.open .hamburger-btn span {border-color: rgba(255, 255, 255, 0);}.hamburger-menu_1590509651378_221 .hamburger-btn span:first-child {transform-origin: 4px -2px;}.hamburger-menu_1590509651378_221.open .hamburger-btn span:first-child {transform: rotate(45deg) translate(7px, -4px);}.hamburger-menu_1590509651378_221.open .hamburger-btn span:nth-last-child(2) {opacity: 0;}.hamburger-menu_1590509651378_221 .hamburger-btn span:nth-child(3) {transform-origin: -11px 4px;}.hamburger-menu_1590509651378_221.open .hamburger-btn span:nth-child(3) {transform: rotate(-45deg) translate(0, 12px);}</style>
-<!-- inspired by https://codepen.io/erikterwan/pen/EVzeRP -->
-<div class="hamburger-menu_1590509651378_221 closed">
-    <div class="hamburger-btn ">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
-    <div class="nav-container">
-      <div class="prevent-scale">
-        <nav role="navigation" class="">
-            <ul>
-            
-                <li><a href="home.html" title="Acasă" class="">Generalități</a></li>
-            
-                <li><a href="m-nc-ruri.html" title="Mâncăruri" class="page-link-active">Mâncăruri</a></li>
-            
-                <li><a href="team.html" title="Tradiții" class="">Tradiții</a></li>
-            
-                <li><a href="info.html" title="Regiuni" class="">Regiuni</a></li>
-            
-            </ul>
-        </nav>
-      </div>
-  </div>
-</div>
-<script>
-(function() {
-  var isOpen = false;
-  function close() {
-    isOpen = false;
-    $('.hamburger-menu_1590509651378_221').removeClass('open');
-    $('.hamburger-menu_1590509651378_221').addClass('closed');
-  }
-  function open() {
-    isOpen = true;
-    $('.hamburger-menu_1590509651378_221').addClass('open');
-    $('.hamburger-menu_1590509651378_221').removeClass('closed');
-  }
-  function toggle() {
-    if(isOpen) close();
-    else open();
-  }
-  var silexElement = $('.hamburger-menu_1590509651378_221').closest('.editable-style');
-  function move(data) {
-    var offset = silexElement.offset();
-    $('.hamburger-menu_1590509651378_221 .nav-container').css({
-      'transform': 'translate(' + (data.scrollLeft - (offset.left/data.scale)) + 'px, ' + (data.scrollTop - (offset.top/data.scale)) + 'px)'
-    });
-  }
-  $('.hamburger-menu_1590509651378_221 .hamburger-btn').click(function() { toggle(); });
-  $(document).on('silex.scroll silex.resize', function(e, data) {
-    close();
-    move(data);
-  });
-  close();
-})();
-</script>
-</div></div></div>
+</div></div></div></div>
 
 
 
@@ -497,7 +497,7 @@
 
 <h2><i>Nabemono</i></h2>
 
-</div></div><div data-silex-type="image-element" class="editable-style silex-id-1590504906206-16 image-element" style=""><img src="assets/250px-Udon-M1336.jpg" class="silex-element-content"></div><div data-silex-type="text-element" class="editable-style silex-id-1590506335365-21 text-element" style=""><div class="silex-element-content normal"><h2>Udon</h2><span class="_wysihtml-temp-caret-fix" style="position: absolute; display: block; min-width: 1px; z-index: 99999;">﻿</span></div></div><div data-silex-type="text-element" class="editable-style silex-id-1590506033233-20 text-element" style=""><div class="silex-element-content normal"> <h2>Mic dejun <i>kaiseki</i></h2><span class="_wysihtml-temp-caret-fix" style="position: absolute; display: block; min-width: 1px; z-index: 99999;">﻿</span></div></div><div data-silex-type="text-element" class="editable-style text-element silex-id-1434426613658-6 paragraph" style="">
+</div></div><div data-silex-type="image-element" class="editable-style silex-id-1590504906206-16 image-element" style=""><img src="assets/250px-Udon-M1336.jpg" class="silex-element-content"></div><div data-silex-type="text-element" class="editable-style text-element silex-id-1434426613658-6 paragraph" style="">
                 <div class="silex-element-content normal">
                      <h3><i>Nabemono</i>&nbsp;sunt mâncăruri pregătite într-o oală mare pe masă, în fața oaspeților. Felurile principale de <i>nabemono</i>&nbsp;sunt <i>mizutaki</i>, <i>yudōfu</i>, <i>udonsuki</i>, <i>kanisuki</i>, <i>shabushabu</i>&nbsp;și <i>sukiyaki</i>.</h3><h3><i>Menrui</i>&nbsp;sunt mâncăruri de tăiței, servite reci sau calde. Cele mai cunoscute feluri de tăiței sunt <i>udon</i>, <i>sōmen</i>&nbsp;și <i>soba</i>. Primele două sunt făcute din făină de grâu, iar <i>soba</i>&nbsp;din făină de hrișcă. <i>Sōmen</i>&nbsp;sunt tăiței uscați, dar <i>udon</i>&nbsp;și <i>soba</i>&nbsp;pot fi tăiței uscați sau proaspeți.</h3><h3><i>Gohanmono</i>&nbsp;sunt mâncăruri de orez amestecat cu alte ingrediente: <i>sekihan</i>&nbsp;(orez amestecat cu fasole <i>azuki</i>), <i>takikomigohan</i>&nbsp;(primăvara este orez cu mazăre sau mlădițe de <a href="https://ro.wikipedia.org/wiki/Bambus" title="Bambus">bambus</a>, iar toamna este orez amestecat cu ciuperci <i>matsutake</i>&nbsp;sau castane. <i>Domburimono</i>&nbsp;sunt mâncăruri unde în castron, peste orezul fiert, se pun tot felul de alte ingrediente (șnițel pané, de exemplu).</h3><h3><i>Sunomono</i>&nbsp;(pește crud sau fiert cu zarzavaturi, condimentat cu oțet și zahăr) și <i>aemono</i>&nbsp;(pește și zarzavaturi acoperite cu o pastă făcută din <i>tōfu</i>, susan măcinat și <i>miso</i>).</h3>
                 </div>
@@ -511,8 +511,8 @@
 <br>
 
  <h2><i></i></h2><span class="_wysihtml-temp-caret-fix" style="position: absolute; display: block; min-width: 1px; z-index: 99999;">﻿</span></div>
-            ﻿﻿﻿</div></div>
-    <div data-silex-type="container-element" class="editable-style silex-id-1434426787582-9 container-element" style=""></div><div data-silex-type="image-element" class="editable-style silex-id-1590504876316-13 image-element" style=""><img src="assets/250px-Instant_miso_soup.jpg" class="silex-element-content"></div><div data-silex-type="text-element" class="editable-style silex-id-1590505869961-19 text-element" style=""><div class="silex-element-content normal"> <h3>Supă <i>miso</i></h3><span class="_wysihtml-temp-caret-fix" style="position: absolute; display: block; min-width: 1px; z-index: 99999;">﻿</span></div></div></div>
+            ﻿﻿﻿</div><div data-silex-type="text-element" class="editable-style silex-id-1590506033233-20 text-element" style=""><div class="silex-element-content normal"> <h2>Mic dejun <i>kaiseki</i></h2><span class="_wysihtml-temp-caret-fix" style="position: absolute; display: block; min-width: 1px; z-index: 99999;">﻿</span></div></div><div data-silex-type="text-element" class="editable-style silex-id-1590506335365-21 text-element" style=""><div class="silex-element-content normal"><h2>Udon</h2><span class="_wysihtml-temp-caret-fix" style="position: absolute; display: block; min-width: 1px; z-index: 99999;">﻿</span></div></div><div data-silex-type="image-element" class="editable-style silex-id-1590504876316-13 image-element" style=""><img src="assets/250px-Instant_miso_soup.jpg" class="silex-element-content"></div><div data-silex-type="text-element" class="editable-style silex-id-1590505869961-19 text-element" style=""><div class="silex-element-content normal"> <h3>Supă <i>miso</i></h3><span class="_wysihtml-temp-caret-fix" style="position: absolute; display: block; min-width: 1px; z-index: 99999;">﻿</span></div></div></div>
+    <div data-silex-type="container-element" class="editable-style silex-id-1434426787582-9 container-element" style=""></div></div>
     
     
 
@@ -521,4 +521,4 @@
 
 
 
-<div data-silex-type="container-element" class="container-element editable-style silex-id-1590509303129-31 section-element page-m-nc-ruri paged-element paged-element-visible"><div data-silex-type="container-element" class="editable-style silex-id-1590509303012-30 container-element silex-element-content silex-container-content website-width"></div></div></body></html>
+<div data-silex-type="container-element" class="container-element editable-style silex-id-1590509303129-31 section-element page-m-nc-ruri paged-element paged-element-visible"><div data-silex-type="container-element" class="editable-style silex-id-1590509303012-30 container-element silex-element-content silex-container-content website-width" style=""></div></div></body></html>
